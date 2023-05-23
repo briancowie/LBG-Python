@@ -8,9 +8,11 @@ For full list of assertions available: https://docs.python.org/3.8/library/unitt
 import unittest
 from lbg import item_builder
 from flask_api import status
+from sys import argv
 import requests
 
-PORT = 8080
+# could have just done PORT = 8000 as in Jenkins shell script, and not added from sys import argv 
+PORT = int(argv[1])
 BASE_URL = f"http://localhost:{PORT}"
 
 class MyLbgApiTestCase(unittest.TestCase):
