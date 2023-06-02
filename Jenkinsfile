@@ -13,7 +13,6 @@ pipeline {
             steps {
                 sh '''
                 docker build -t bcowie-sprint3:v1 .
-                docker run -d -p 5000:8080 --name bcowie-sprint3 bcowie-sprint3:v1
                 '''
             }
         }
