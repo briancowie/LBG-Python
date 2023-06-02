@@ -12,7 +12,7 @@ pipeline {
         stage('build and run containers') {
             steps {
                 sh '''
-                docker build -t bcowie-sprint3:v1 .
+                docker build -t gcr.io/lbg-mea-11/bcowie-sprint3:v1 .
                 '''
             }
         }
